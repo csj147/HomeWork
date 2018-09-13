@@ -1,5 +1,5 @@
 # HomeWork
-#MariaDB的查询
+<h1>MariaDB的查询</h1>
 select sh.cityName 省,s.cityName 市,x.cityName 县  
 from s_provinces x  
 inner join s_provinces s on x.parentId = s.id   
