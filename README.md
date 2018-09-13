@@ -1,5 +1,6 @@
 # HomeWork
 <h1>MariaDB的查询</h1>
+
 select sh.cityName 省,s.cityName 市,x.cityName 县  
 from s_provinces x  
 inner join s_provinces s on x.parentId = s.id   
@@ -19,10 +20,10 @@ parentId 列 id 分别为省、市、县提供了互相查询的方法，之后�
 
 
 
-#分割方法的总结
-##题目要求：
-###对 lagou_position 表数据进行清理，然后按照三大范式分离出 lagou_position、lagou_city、lagou_company三个表
-##思路整理
+<h1>分割方法的总结</h1>
+<h3>题目要求：</h3>
+<h3>对 lagou_position 表数据进行清理，然后按照三大范式分离出 lagou_position、lagou_city、lagou_company三个表</h3>
+<h2>思路整理</h2>
 1、取出公司的相关字段，company_id、company_short_name、company_full_name、company_size、financestage (注：要去除重复数据)，把这些数据转移到 lagou_company 表中。
     1) create table lagou_company as  
          select distinct t.company_id as cid,  
